@@ -15,7 +15,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(elevation: 0,
         backgroundColor:    Color.fromRGBO(218, 218, 218, 0.39),
         leading: IconButton(
             onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) =>SignIn()));},

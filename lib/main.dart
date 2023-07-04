@@ -1,6 +1,7 @@
 import 'package:darebny/RessetPassword.dart';
 import 'package:darebny/SignIn.dart';
 import 'package:darebny/SignUp.dart';
+import 'package:darebny/Splash.dart';
 import 'package:flutter/material.dart';
 
 void main (){
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:SignIn(),
+      home:Splash(),
     );
   }
 }
