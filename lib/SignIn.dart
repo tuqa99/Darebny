@@ -1,3 +1,4 @@
+import 'package:darebny/RessetPassword.dart';
 import 'package:darebny/SignUp.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
@@ -19,19 +20,19 @@ class _SignInState extends State<SignIn> {
         child: Container(
           width: screenSize.width,
           height: screenSize.height,
-          color: Color.fromRGBO(218, 218, 218, 0.3),
+          color: Color.fromRGBO(218, 218, 218, 0.39),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 75),
+              // SizedBox(height: 75),
               Image.asset(
-                "lib/assets/images/logo.png",
-                height: 172,
-                width: 189,
+                "lib/assets/images/logo.gif",
+                height: 300,
+                width: screenSize.width,
               ),
-              SizedBox(
-                height: 50,
-              ),
+              // SizedBox(
+              //   height: 50,
+              // ),
               Text(
                 "Sign in",
                 style: TextStyle(
@@ -130,7 +131,7 @@ class _SignInState extends State<SignIn> {
                 height: 15,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => RessetPassword()));},
                 child: Text(
                   "Forgot Password?",
                   style: TextStyle(

@@ -16,7 +16,7 @@ class _SignUpState extends State<SignUp> {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:    Color.fromRGBO(218, 218, 218, 0.3),
+        backgroundColor:    Color.fromRGBO(218, 218, 218, 0.39),
         leading: IconButton(
             onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) =>SignIn()));},
             icon: Icon(
@@ -28,7 +28,7 @@ class _SignUpState extends State<SignUp> {
         child: Container(
           width: screenSize.width,
           height: screenSize.height,
-          color: Color.fromRGBO(218, 218, 218, 0.3),
+          color: Color.fromRGBO(218, 218, 218, 0.39),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -217,18 +217,7 @@ class _SignUpState extends State<SignUp> {
               SizedBox(
                 height: 15,
               ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    color: Colors.black,
-                    height: 1.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.left,
-                ),
-              ),
+
               SizedBox(
                 height: 20,
               ),

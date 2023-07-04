@@ -1,3 +1,4 @@
+import 'package:darebny/SignIn.dart';
 import 'package:flutter/material.dart';
 
 class RessetPassword extends StatefulWidget {
@@ -12,9 +13,18 @@ class _RessetPasswordState extends State<RessetPassword> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor:    Color.fromRGBO(218, 218, 218, 0.39),
+        leading: IconButton(
+            onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) =>SignIn()));},
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            )),
+      ),
       body: Container(
         width: screenSize.width,
-        color: Color.fromRGBO(218, 218, 218, 0.3),
+        color: Color.fromRGBO(218, 218, 218, 0.39),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
