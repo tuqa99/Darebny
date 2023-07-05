@@ -1,4 +1,4 @@
-import 'package:darebny/SignIn.dart';
+import 'package:darebny/screens/SignIn.dart';
 import 'package:darebny/const_values.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +14,14 @@ class _RessetPasswordState extends State<RessetPassword> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(elevation: 0,
-        backgroundColor:    Color.fromRGBO(218, 218, 218, 0.39),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromRGBO(218, 218, 218, 0.39),
         leading: IconButton(
-            onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) =>SignIn()));},
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => SignIn()));
+            },
             icon: Icon(
               Icons.arrow_back,
               color: Colors.black,
@@ -47,7 +51,7 @@ class _RessetPasswordState extends State<RessetPassword> {
               ),
               Text(
                 "     Please enter your email address to"
-                    "\n     request a password reset",
+                "\n     request a password reset",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 15,
@@ -75,7 +79,7 @@ class _RessetPasswordState extends State<RessetPassword> {
                           enabledBorder: OutlineInputBorder(
                               gapPadding: 10,
                               borderRadius:
-                              const BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               borderSide: BorderSide(color: Colors.white)),
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           contentPadding: const EdgeInsets.symmetric(
@@ -83,9 +87,9 @@ class _RessetPasswordState extends State<RessetPassword> {
                           border: OutlineInputBorder(
                               gapPadding: 10,
                               borderRadius:
-                              const BorderRadius.all(Radius.circular(25)),
+                                  const BorderRadius.all(Radius.circular(25)),
                               borderSide:
-                              BorderSide(color: Colors.grey.shade800)),
+                                  BorderSide(color: Colors.grey.shade800)),
                           hintText: 'abc@gmail.com',
                           prefixIcon: const Icon(
                             Icons.email_outlined,
@@ -106,8 +110,8 @@ class _RessetPasswordState extends State<RessetPassword> {
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15))),
-                            backgroundColor:
-                            MaterialStateProperty.all(ConsValues.Color_BUTTON)),
+                            backgroundColor: MaterialStateProperty.all(
+                                ConsValues.Color_BUTTON)),
                         onPressed: () {},
                         child: Text(
                           "SEND",

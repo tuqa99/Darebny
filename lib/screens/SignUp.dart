@@ -1,4 +1,4 @@
-import 'package:darebny/SignIn.dart';
+import 'package:darebny/screens/SignIn.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
 
@@ -15,10 +15,14 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(elevation: 0,
-        backgroundColor:    Color.fromRGBO(218, 218, 218, 0.39),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromRGBO(218, 218, 218, 0.39),
         leading: IconButton(
-            onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) =>SignIn()));},
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => SignIn()));
+            },
             icon: Icon(
               Icons.arrow_back,
               color: Colors.black,
@@ -60,7 +64,7 @@ class _SignUpState extends State<SignUp> {
                         enabledBorder: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+                                const BorderRadius.all(Radius.circular(10)),
                             borderSide: BorderSide(color: Colors.white)),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         contentPadding: const EdgeInsets.symmetric(
@@ -68,9 +72,9 @@ class _SignUpState extends State<SignUp> {
                         border: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(25)),
+                                const BorderRadius.all(Radius.circular(25)),
                             borderSide:
-                            BorderSide(color: Colors.grey.shade800)),
+                                BorderSide(color: Colors.grey.shade800)),
                         hintText: 'Full Name',
                         prefixIcon: const Icon(
                           UniconsLine.user,
@@ -98,7 +102,7 @@ class _SignUpState extends State<SignUp> {
                         enabledBorder: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+                                const BorderRadius.all(Radius.circular(10)),
                             borderSide: BorderSide(color: Colors.white)),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         contentPadding: const EdgeInsets.symmetric(
@@ -106,9 +110,9 @@ class _SignUpState extends State<SignUp> {
                         border: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(25)),
+                                const BorderRadius.all(Radius.circular(25)),
                             borderSide:
-                            BorderSide(color: Colors.grey.shade800)),
+                                BorderSide(color: Colors.grey.shade800)),
                         hintText: 'abc@gmail.com',
                         prefixIcon: const Icon(
                           Icons.email_outlined,
@@ -137,16 +141,16 @@ class _SignUpState extends State<SignUp> {
                         enabledBorder: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+                                const BorderRadius.all(Radius.circular(10)),
                             borderSide: BorderSide(color: Colors.white)),
                         contentPadding: const EdgeInsets.symmetric(
                             horizontal: 35, vertical: 25),
                         border: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(25)),
+                                const BorderRadius.all(Radius.circular(25)),
                             borderSide:
-                            BorderSide(color: Colors.grey.shade800)),
+                                BorderSide(color: Colors.grey.shade800)),
                         labelStyle: TextStyle(color: Colors.grey.shade800),
                         hintText: 'Your Password',
                         prefixIcon: Icon(
@@ -186,16 +190,16 @@ class _SignUpState extends State<SignUp> {
                         enabledBorder: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+                                const BorderRadius.all(Radius.circular(10)),
                             borderSide: BorderSide(color: Colors.white)),
                         contentPadding: const EdgeInsets.symmetric(
                             horizontal: 35, vertical: 25),
                         border: OutlineInputBorder(
                             gapPadding: 10,
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(25)),
+                                const BorderRadius.all(Radius.circular(25)),
                             borderSide:
-                            BorderSide(color: Colors.grey.shade800)),
+                                BorderSide(color: Colors.grey.shade800)),
                         labelStyle: TextStyle(color: Colors.grey.shade800),
                         hintText: 'Confirm Password',
                         prefixIcon: Icon(
@@ -217,7 +221,6 @@ class _SignUpState extends State<SignUp> {
               SizedBox(
                 height: 15,
               ),
-
               SizedBox(
                 height: 20,
               ),
@@ -229,8 +232,8 @@ class _SignUpState extends State<SignUp> {
                           shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
-                          backgroundColor:
-                          MaterialStateProperty.all(Color.fromRGBO(205, 67, 58, 1))),
+                          backgroundColor: MaterialStateProperty.all(
+                              Color.fromRGBO(205, 67, 58, 1))),
                       onPressed: () {},
                       child: Text(
                         "SIGN UP",
@@ -278,7 +281,10 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   Text("Don\'t have an account?"),
                   TextButton(
-                    onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignIn()));},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => SignIn()));
+                    },
                     child: Text(
                       "Sign in",
                       style: TextStyle(

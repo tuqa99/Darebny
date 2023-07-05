@@ -1,5 +1,6 @@
-import 'package:darebny/SignIn.dart';
+import 'package:darebny/screens/SignIn.dart';
 import 'package:flutter/material.dart';
+
 class Splash extends StatefulWidget {
   const Splash({super.key});
 
@@ -13,9 +14,7 @@ class _SplashState extends State<Splash> {
     //set time to loade the new page
     Future.delayed(Duration(seconds: 6), () {
       Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>SignIn()));
+          context, MaterialPageRoute(builder: (context) => SignIn()));
     });
     super.initState();
   }
@@ -24,9 +23,8 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-
       body: Container(
-        color:Color.fromRGBO(218, 218, 218, 0.39),
+        color: Color.fromRGBO(218, 218, 218, 0.39),
         width: screenSize.width,
         height: screenSize.height,
         child: Image.asset(
