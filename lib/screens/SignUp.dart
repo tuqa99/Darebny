@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:darebny/screens/SignIn.dart';
+import 'package:darebny/screens/Training%20details%20page/Training%20details%20page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
 
@@ -10,6 +13,9 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   bool pass = false;
   @override
   Widget build(BuildContext context) {
@@ -234,7 +240,7 @@ class _SignUpState extends State<SignUp> {
                                   borderRadius: BorderRadius.circular(15))),
                           backgroundColor: MaterialStateProperty.all(
                               Color.fromRGBO(205, 67, 58, 1))),
-                      onPressed: () {},
+                      onPressed: () {CreateAccount();},
                       child: Text(
                         "SIGN UP",
                         style: TextStyle(color: Colors.white),
@@ -301,5 +307,43 @@ class _SignUpState extends State<SignUp> {
         ),
       ),
     );
+  }
+  void CreateAccount() async {
+    try {
+      final credential =
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+      if (credential != null) {
+        FirebaseFirestore.instance
+            .collection("Users")
+            .doc(credential.user!.uid)
+            .set({
+          "name": usernameController.text,
+          "Email": emailController.text,
+          "Password":passwordController.text,
+        });
+
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const TrainingDetails()));
+      }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text("The password provided is too weak."),
+          duration: Duration(seconds: 2),
+        ));
+        print('The password provided is too weak.');
+      } else if (e.code == 'email-already-in-use') {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text("The account already exists for that email."),
+          duration: Duration(seconds: 2),
+        ));
+        print('The account already exists for that email.');
+      }
+    } catch (e) {
+      print(e);
+    }
   }
 }

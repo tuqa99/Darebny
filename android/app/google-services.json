@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "552200408711",
+    "project_id": "darebny-42086",
+    "storage_bucket": "darebny-42086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552200408711:android:f6700b45d1b28d90c77222",
+        "android_client_info": {
+          "package_name": "com.example.darebny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552200408711-esjvuo07urbufal6ipufsn4ad9gf30ja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbXJdwiDgUId8Yhk--XYoc0bzJ4RRkvf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552200408711-esjvuo07urbufal6ipufsn4ad9gf30ja.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "552200408711-f5endk04getvb7ohtdlmpcbnekl1hf1c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.darebny"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
