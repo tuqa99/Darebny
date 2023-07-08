@@ -111,7 +111,7 @@ class _RessetPasswordState extends State<RessetPassword> {
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15))),
                             backgroundColor: MaterialStateProperty.all(
-                                ConsValues.Color_BUTTON)),
+                                ConsValues.BUTTON_COLOR)),
                         onPressed: () {},
                         child: Text(
                           "SEND",
