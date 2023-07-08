@@ -24,51 +24,42 @@ class IconsFields extends StatefulWidget {
 
 class _IconsFieldsState extends State<IconsFields> {
   List<String> major = [
-    'Science',
-    'Technology',
-    'Math',
+    'Teaching',
+    'cooking',
+    'Sports',
     'Engineering',
     'medical',
     'Business ',
-    'languages',
-    'programming',
-    'lawyer'
+    'Art',
   ];
-  List<IconData> majorIcon = [
-    Icons.science,
-    Icons.computer,
-    Icons.plus_one_outlined,
-    Icons.engineering_outlined,
-    Icons.medical_services,
-    Icons.business,
-    Icons.language,
-    Icons.laptop_windows_sharp,
-    Icons.rule_folder_sharp
+  List<String> majorimage = [
+    'lib/assets/images/teacher.jpg',
+    'lib/assets/images/cooking.jpg',
+    'lib/assets/images/sports.jpg',
+    'lib/assets/images/engineering.jpg',
+    'lib/assets/images/medical.jpg',
+    'lib/assets/images/Business.jpg',
+    'lib/assets/images/art.jpg'
   ];
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 110,
       width: double.infinity,
       child: ListView.builder(
         itemCount: major.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.only(left: 25.0),
+            padding: const EdgeInsets.only(left: 20.0, right: 8),
             child: GestureDetector(
               onTap: () {},
               child: Column(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: CircleAvatar(
+                  CircleAvatar(
                       backgroundColor: Colors.white,
-                      radius: 35,
-                      child: Icon(majorIcon[index],
-                          size: 30, color: Color.fromRGBO(205, 67, 58, 1)),
-                    ),
-                  ),
+                      radius: 30,
+                      backgroundImage: AssetImage(majorimage[index])),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
@@ -92,7 +83,7 @@ class Date extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12.0, bottom: 8, left: 25),
+      padding: const EdgeInsets.only(top: 8.0, bottom: 8, left: 25),
       child: Text(
         'Date ',
         style: TextStyle(fontSize: 25),
@@ -112,12 +103,12 @@ class _DateOptionState extends State<DateOption> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(6.0),
+      padding: const EdgeInsets.all(3.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-              height: 45,
+              height: 40,
               width: MediaQuery.of(context).size.width * 0.4,
               child: ElevatedButton(
                   style: ButtonStyle(
@@ -129,10 +120,10 @@ class _DateOptionState extends State<DateOption> {
                   child: Text(
                     "Last training",
                     style: TextStyle(
-                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 20),
+                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 16),
                   ))),
           Container(
-              height: 45,
+              height: 40,
               width: MediaQuery.of(context).size.width * 0.4,
               child: ElevatedButton(
                   style: ButtonStyle(
@@ -144,7 +135,7 @@ class _DateOptionState extends State<DateOption> {
                   child: Text(
                     "Next training",
                     style: TextStyle(
-                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 20),
+                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 16),
                   ))),
         ],
       ),
@@ -158,7 +149,7 @@ class trainingstate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 25.0, bottom: 8, left: 25),
+      padding: const EdgeInsets.only(top: 15.0, bottom: 8, left: 25),
       child: Text(
         'State ',
         style: TextStyle(fontSize: 25),
@@ -178,12 +169,12 @@ class _trainingOptionState extends State<trainingOption> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(6.0),
+      padding: const EdgeInsets.all(2.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-              height: 45,
+              height: 40,
               width: MediaQuery.of(context).size.width * 0.4,
               child: ElevatedButton(
                   style: ButtonStyle(
@@ -195,7 +186,7 @@ class _trainingOptionState extends State<trainingOption> {
                   child: Text(
                     "Free",
                     style: TextStyle(
-                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 23),
+                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 18),
                   ))),
           Container(
               height: 45,
@@ -210,7 +201,7 @@ class _trainingOptionState extends State<trainingOption> {
                   child: Text(
                     "paid",
                     style: TextStyle(
-                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 23),
+                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 18),
                   ))),
         ],
       ),
@@ -254,7 +245,7 @@ class _locationOptionsState extends State<locationOptions> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12.0, left: 25),
+      padding: const EdgeInsets.only(left: 25, top: 3),
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 0.08,
@@ -303,7 +294,7 @@ class _ApplyBottonState extends State<ApplyBotton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 80.0, bottom: 15),
+      padding: const EdgeInsets.only(top: 170.0, bottom: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -320,7 +311,7 @@ class _ApplyBottonState extends State<ApplyBotton> {
                   child: Text(
                     "RESET",
                     style: TextStyle(
-                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 25),
+                        color: Color.fromRGBO(205, 67, 58, 1), fontSize: 18),
                   ))),
           Container(
               height: 45,
@@ -335,7 +326,7 @@ class _ApplyBottonState extends State<ApplyBotton> {
                   child: Text(
                     "APPLY",
                     style: TextStyle(
-                        color: Color.fromRGBO(241, 235, 235, 1), fontSize: 25),
+                        color: Color.fromRGBO(241, 235, 235, 1), fontSize: 18),
                   ))),
         ],
       ),
