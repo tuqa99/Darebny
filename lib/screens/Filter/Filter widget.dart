@@ -77,29 +77,29 @@ class _IconsFieldsState extends State<IconsFields> {
   }
 }
 
-class Date extends StatelessWidget {
-  const Date({super.key});
+class place extends StatelessWidget {
+  const place({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 8.0, bottom: 8, left: 25),
       child: Text(
-        'Date ',
+        'place ',
         style: TextStyle(fontSize: 25),
       ),
     );
   }
 }
 
-class DateOption extends StatefulWidget {
+class placeOption extends StatefulWidget {
   const DateOption({super.key});
 
   @override
   State<DateOption> createState() => _DateOptionState();
 }
 
-class _DateOptionState extends State<DateOption> {
+class _placeOptionState extends State<placeOption> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -118,7 +118,7 @@ class _DateOptionState extends State<DateOption> {
                           Color.fromRGBO(253, 253, 253, 1))),
                   onPressed: () {},
                   child: Text(
-                    "Last training",
+                    "onLine",
                     style: TextStyle(
                         color: Color.fromRGBO(205, 67, 58, 1), fontSize: 16),
                   ))),
@@ -133,7 +133,7 @@ class _DateOptionState extends State<DateOption> {
                           Color.fromRGBO(250, 248, 248, 1))),
                   onPressed: () {},
                   child: Text(
-                    "Next training",
+                    "Off Line",
                     style: TextStyle(
                         color: Color.fromRGBO(205, 67, 58, 1), fontSize: 16),
                   ))),
