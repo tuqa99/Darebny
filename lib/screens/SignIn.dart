@@ -36,17 +36,21 @@ class _SignInState extends State<SignIn> {
                 height: 300,
                 width: screenSize.width,
               ),
-              Text(
-                "Sign in",
-                style: TextStyle(
-                  color: Colors.black,
-                  height: 1.0,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                ),
-                textAlign: TextAlign.left,
+              Row( mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "   Sign in",
+                    style: TextStyle(
+                      color: Colors.black,
+                      height: 1.0,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ],
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 25),
               Container(
                 height: 56,
                 width: screenSize.width / 1.1,
@@ -138,21 +142,25 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 20),
               TextButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => RessetPassword()),
                   );
                 },
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    color: Colors.black,
-                    height: 1.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.left,
+                child: Row( mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                        color: Colors.black,
+                        height: 1.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.right,
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 20),
@@ -209,7 +217,7 @@ class _SignInState extends State<SignIn> {
                   ),
                 ],
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -230,6 +238,7 @@ class _SignInState extends State<SignIn> {
                       ),
                     ),
                   ),
+
                 ],
               ),
             ],
