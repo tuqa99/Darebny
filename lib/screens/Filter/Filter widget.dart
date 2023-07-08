@@ -93,10 +93,10 @@ class place extends StatelessWidget {
 }
 
 class placeOption extends StatefulWidget {
-  const DateOption({super.key});
+  const placeOption({super.key});
 
   @override
-  State<DateOption> createState() => _DateOptionState();
+  State<placeOption> createState() => _placeOptionState();
 }
 
 class _placeOptionState extends State<placeOption> {

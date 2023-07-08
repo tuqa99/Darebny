@@ -35,8 +35,8 @@ class _FilterPagState extends State<FilterPag> {
                 children: [
                   title(),
                   IconsFields(),
-                  Date(),
-                  DateOption(),
+                  place(),
+                  placeOption(),
                   trainingstate(),
                   trainingOption(),
                   Location(),
