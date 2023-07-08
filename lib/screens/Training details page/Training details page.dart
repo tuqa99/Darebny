@@ -56,7 +56,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                   Locationinfo(),
                   Jobdes(),
                   requirements(),
-                  ApplyButton()
+                  ApplyButton(),
                 ],
               ),
             ),
