@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:badges/badges.dart' as badges;
 
+import '../../Training details page/Training details page.dart';
+
 class Body extends StatefulWidget {
   const Body({super.key});
 
@@ -144,15 +146,33 @@ class _BodyState extends State<Body> {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                _buildRecentlyAddedItems(
-                  title: "Marketing training",
-                  supTitle: "Google",
-                  backGroundImagePath: "assets/images/Image Banner 2.png",
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TrainingDetails()),
+                    );
+                  },
+                  child: _buildRecentlyAddedItems(
+                    title: "Marketing training",
+                    supTitle: "Google",
+                    backGroundImagePath: "assets/images/Image Banner 2.png",
+                  ),
                 ),
-                _buildRecentlyAddedItems(
-                  title: "Fashion",
-                  supTitle: "20 Brands",
-                  backGroundImagePath: "assets/images/Image Banner 3.png",
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TrainingDetails()),
+                    );
+                  },
+                  child: _buildRecentlyAddedItems(
+                    title: "Fashion",
+                    supTitle: "20 Brands",
+                    backGroundImagePath: "assets/images/Image Banner 3.png",
+                  ),
                 ),
               ],
             ),
@@ -244,7 +264,7 @@ class _BodyState extends State<Body> {
     return Container(
       height: height * .05,
       // margin: EdgeInsets.only(top: Checkbox.width / 8),
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         // bottom: Checkbox.width / bottomPadding,
         left: Checkbox.width,
         right: Checkbox.width,

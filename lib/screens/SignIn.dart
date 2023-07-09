@@ -20,9 +20,7 @@ class _SignInState extends State<SignIn> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery
-        .of(context)
-        .size;
+    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -37,7 +35,8 @@ class _SignInState extends State<SignIn> {
                 height: 300,
                 width: screenSize.width,
               ),
-              const Row( mainAxisAlignment: MainAxisAlignment.start,
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     "   Sign in",
@@ -147,10 +146,12 @@ class _SignInState extends State<SignIn> {
               TextButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const RessetPassword()),
+                    MaterialPageRoute(
+                        builder: (context) => const RessetPassword()),
                   );
                 },
-                child: const Row( mainAxisAlignment: MainAxisAlignment.end,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
                       "Forgot Password?",
@@ -175,14 +176,16 @@ class _SignInState extends State<SignIn> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                     ),
-                    backgroundColor:
-                    MaterialStateProperty.all(const Color.fromRGBO(205, 67, 58, 1)),
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromRGBO(205, 67, 58, 1)),
                   ),
-                  onPressed:() {
+                  onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const HomeScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()),
                     );
+                    createuser;
                   }, // Call createuser function
                   child: const Text(
                     "SIGN IN",
@@ -244,7 +247,6 @@ class _SignInState extends State<SignIn> {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ],
