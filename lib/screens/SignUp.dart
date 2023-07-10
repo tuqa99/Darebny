@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:darebny/screens/SignIn.dart';
 import 'package:darebny/screens/Training%20details%20page/Training%20details%20page.dart';
+import 'package:darebny/screens/home/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
@@ -350,14 +351,15 @@ class _SignUpState extends State<SignUp> {
 
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const TrainingDetails()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text("The password provided is too weak."),
+            backgroundColor: Color.fromRGBO(218, 218, 218, 1),
+            content: Text("The password provided is too weak.",style: TextStyle(color: Colors.black)),
             duration: Duration(seconds: 2),
           ),
         );
@@ -365,7 +367,8 @@ class _SignUpState extends State<SignUp> {
       } else if (e.code == 'email-already-in-use') {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text("The account already exists for that email."),
+            backgroundColor: Color.fromRGBO(218, 218, 218, 1),
+            content: Text("The account already exists for that email.",style: TextStyle(color: Colors.black)),
             duration: Duration(seconds: 2),
           ),
         );

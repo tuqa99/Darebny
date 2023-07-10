@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:darebny/screens/RessetPassword.dart';
 import 'package:darebny/screens/SignUp.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,6 +9,7 @@ import 'package:unicons/unicons.dart';
 import 'home/home_screen.dart';
 
 class SignIn extends StatefulWidget {
+
   const SignIn({Key? key}) : super(key: key);
 
   @override
@@ -14,13 +17,16 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  StreamSubscription<User?>? _listener;
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool pass = false;
-
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
+    final screenSize = MediaQuery
+        .of(context)
+        .size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -180,12 +186,7 @@ class _SignInState extends State<SignIn> {
                         const Color.fromRGBO(205, 67, 58, 1)),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomeScreen()),
-                    );
-                    createuser;
+                   createuser();
                   }, // Call createuser function
                   child: const Text(
                     "SIGN IN",
@@ -272,16 +273,16 @@ class _SignInState extends State<SignIn> {
       if (e.code == 'user-not-found') {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            backgroundColor: Colors.cyan,
-            content: Text("No user found for that email."),
+            backgroundColor:Color.fromRGBO(218, 218, 218,1),
+            content: Text("No user found for that email.",style: TextStyle(color: Colors.black),),
             duration: Duration(seconds: 5),
           ),
         );
       } else if (e.code == 'wrong-password') {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            backgroundColor: Colors.cyan,
-            content: Text("Wrong password provided for that user."),
+            backgroundColor:Color.fromRGBO(218, 218, 218, 0.39),
+            content: Text("Wrong password provided for that user.",style: TextStyle(color: Colors.black)),
             duration: Duration(seconds: 5),
           ),
         );
