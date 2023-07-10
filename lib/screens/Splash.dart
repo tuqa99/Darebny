@@ -28,7 +28,7 @@ class _SplashState extends State<Splash> {
         width: screenSize.width,
         height: screenSize.height,
         child: Image.asset(
-          "lib/assets/images/logo.gif",
+          "assets/images/logo.gif",
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
         ),
