@@ -4,25 +4,25 @@ class Job {
   final String title;
   final String address;
   final String companyLogo;
-  final String timeAgo;
-  final String type;
-  final String experienceLevel;
-  final String experienceLevelColor;
+  //final String timeAgo;
+  final String date;
+  //final String experienceLevel;
+  //final String experienceLevelColor;
 
   bool isMyFav;
 
-  Job(this.title, this.address, this.timeAgo, this.companyLogo, this.type, this.experienceLevel, this.experienceLevelColor, this.isMyFav);
+  Job(this.title, this.address, this.companyLogo, this.date, this.isMyFav);
 
   factory Job.fromJson(Map<String, dynamic> json) {
     return new Job(
         json['title'],
         json['address'],
-        json['timeAgo'],
+        //json['timeAgo'],
         json['companyLogo'],
-        json['type'],
-        json['experienceLevel'],
-        json['experienceLevelColor'],
+        json['date'],
+        //json['experienceLevel'],
+        // json['experienceLevelColor'],
         json['isMyFav']
     );
 
-} }
+  } }
